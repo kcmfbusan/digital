@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>
+   디지털 시민 체크리스트
+  </title>
+<style>
+   body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+    }
+    .title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .title img {
+      width: 24px;
+      vertical-align: middle;
+    }
+    .case-summary {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .case {
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .case:hover {
+      transform: translateY(-5px);
+    }
+    .case img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .case-title {
+      padding: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background-color: #eaeaea;
+      text-align: center;
+    }
+    .footer {
+      font-size: 0.75rem;
+      color: #888;
+      margin-top: 40px;
+      line-height: 1.4;
+      text-align: center;
+    }
+  
+    .case-summary {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 30px;
+    }
+    .case {
+      background-color: #fff;
+      border-radius: 15px;
+      padding: 10px;
+      flex: 1;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s;
+      text-align: center;
+    }
+    .case:hover {
+      transform: scale(1.03);
+    }
+    .case img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .case-title {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  
+.case-box {
+  width: 45%;
+  min-width: 280px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="title">
+    부산시청자미디어센터
+    <br/>
+    디지털 시민을 위한 체크리스트
+    <img alt="check icon" src="check_icon.png" style="width:20px; vertical-align:middle;"/>
+</div>
+<div class="case-summary" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+<div class="case" onclick="location.href='case1_final.html'">
+<img alt="아들이 사고가 났다고?" src="case1_summary.png"/>
+<div class="case-title">
+      아들이 사고가 났다고?
+     </div>
+</div>
+<div class="case" onclick="location.href='case2_final.html'">
+<img alt="전화 한통으로 내 이름이 대출에 쓰였어요" src="case2_summary.png"/>
+<div class="case-title">
+      전화 한통으로 내 이름이 대출에 쓰였어요
+     </div>
+</div>
+</div>
+<div class="footer">
+    기획 : 부산시청자미디어센터 이혜은 강사
+    <br/>
+    제작 : 부산시청자미디어센터
+    <br/>
+    ※ 본 콘텐츠에 사용된 모든 이미지는 생성형 AI를 활용해 제작하였습니다.
+   </div>
+</div>
+<img alt="부산시청자미디어센터 로고" src="센터로고(가로형).png" style="display:block; margin:40px auto 0; max-width:250px;"/>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>전화 한통으로 대출 피해?</title>
+<style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .screen { display: none; }
+    .screen.active { display: block; }
+    .choice-box { margin-top: 20px; }
+    .choice {
+      margin: 10px 0;
+      padding: 15px;
+      background-color: #ffe0e0;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .choice:hover {
+      background-color: #ffd6d6;
+      border-color: #cc0000;
+    }
+    img.full {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    .info-box {
+      background: rgba(255,255,255,0.9);
+      padding: 12px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .highlight {
+      font-weight: bold;
+      color: #c00;
+    }
+  </style>
+</head>
+<body>
+<div class="screen active" id="s1">
+<img alt="사건 요약" class="full" src="case2_summary.png"/>
+<h3 class="highlight">당신의 선택은?</h3>
+<div class="choice-box">
+<div class="choice" onclick="next('s2')">조금 의심되지만 공공기관이라 믿고 전송</div>
+<div class="choice" onclick="next('s7')">이상한 전화라 여겨 직접 확인</div>
+</div>
+</div>
+<div class="screen" id="s2"><div style="background-color:white; border-radius:15px; padding:20px; text-align:center; max-width: 500px; margin: 0 auto; box-shadow: 0 0 10px rgba(0,0,0,0.1);"><img alt="경고" class="full" src="warning.gif" style="max-width: 80px; margin-bottom: 10px;"/><h2 class="highlight">피해가 발생하였습니다.</h2></div>
+<div style="text-align:center; margin-top: 20px;"><button class="button" onclick="next('s3')">다음</button></div>
+</div>
+<div class="screen" id="s3">
+<img alt="초기 피해" class="full" src="comic2_1.png"/>
+<div style="text-align:center; margin-top: 20px;"><button class="button" onclick="next('s4')">다음</button></div>
+</div>
+<div class="screen" id="s4">
+<img alt="진행 피해" class="full" src="comic2_2.png"/>
+<div style="text-align:center; margin-top: 20px;"><button class="button" onclick="next('s5')">결과 확인하기</button></div>
+</div>
+<div class="screen" id="s5">
+<img alt="피해 충격" class="full" src="park_shocked.png"/>
+<div style="text-align:center; margin-top: 20px;"><button class="button" onclick="next('s6')">다음</button></div>
+</div>
+<div class="screen" id="s6">
+<div class="info-box">
+<h3>📌 개인정보 도용 피해 시 이렇게 대처하세요</h3>
+<ul>
+<li style="font-size: 1.1rem; font-weight: bold;">📞 피해를 알아챘다면, 바로 금융기관이나 통신사에 연락해 이상 거래를 막아주세요.</li>
+<li style="font-size: 1.1rem; font-weight: bold;">📬 개인정보가 도용된 것 같다면 전문기관에 상담을 요청하세요.<br/>    ✅ 한국인터넷진흥원 명의도용 신고 118
+✅ 금융감독원 금융사기 피해 신고 1332</li>
+<li style="font-size: 1.1rem; font-weight: bold;">🔎 혹시 누군가 내 이름으로 계좌나 휴대폰을 만들지 않았는지 확인해보세요.<br/>    ✅ 내정보지키미 (방송통신위원회)
+✅ 금융소비자정보포털 파인(금융감독원)
+✅ 개인정보노출확인 (KISA)</li>
+<li style="font-size: 1.1rem; font-weight: bold;">🔐 통신사나 금융사에 요청하면 내 이름으로 새로 계좌나 휴대폰을 못 만들게 막을 수 있어요.</li>
+<li style="font-size: 1.1rem; font-weight: bold;">📝 피해가 계속된다면 주민등록번호 변경도 신청할 수 있어요. 동사무소에서 안내해드립니다.</li>
+<li style="font-size: 1.1rem; font-weight: bold;">📸 사기 증거(전화번호, 문자 내용, 녹취)는 꼭 모아두세요. 경찰서나 사이버수사대에 신고할 수 있습니다.</li>
+</ul>
+</div>
+<div style="text-align:center; margin-top:20px;">
+<button class="button" onclick="location.href='index_final.html'">처음으로 돌아가기</button>
+</div>
+</div>
+<div class="screen" id="s7"><div style="background: white; border-radius: 12px; padding: 20px; text-align: center; max-width: 500px; margin: 0 auto;"><img alt="피해 없음" src="good.gif" style="width: 120px; display: block; margin: 0 auto 10px;"/><span style="font-size: 1.2rem; font-weight: bold; display: block;">👏 잘 대응하셨어요! 정확한 판단으로 피해를 막으셨습니다.</span></div><div style="text-align:center; margin-top: 20px;"><button class="button" onclick="next('s6')" style="margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">다음</button></div></div>
+<script>
+    function next(id) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      window.scrollTo(0, 0);
+    }
+  </script>
+</body>
+</html>
